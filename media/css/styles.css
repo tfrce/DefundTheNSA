@@ -129,6 +129,7 @@ blockquote {
   content: 'Loading...';
   background: url(../images/ajax-loader.gif) no-repeat center center;
 }
+
 .footer {
   padding: 5px;
   text-align: right;
