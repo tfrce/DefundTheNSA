@@ -41,7 +41,8 @@ form {
 .what-to-say-text {
   padding: 10px;
   border: 1px dashed #efefef;
-  background: #f2f2f2;
+  background: #F0EFDF;
+  margin-bottom: 5px;
 }
 .box {
   background-color:white;
@@ -129,9 +130,21 @@ blockquote {
   content: 'Loading...';
   background: url(../images/ajax-loader.gif) no-repeat center center;
 }
-
+#tweets, #phones {
+  display: none;
+}
 .footer {
   padding: 5px;
   text-align: right;
   font-size: 12px;
+}
+#tweets {
+  margin-top: 20px;
+}
+table {
+  width: 400px;
+}
+table th {
+  font-weight: bold;
+  text-align: left;
 }

@@ -15,7 +15,8 @@ function getLegislators(zip, cb) {
 
 function submitZipcode() {
   $('#legislators').addClass('loading');
-  $('#tweets, #phones').html('');
+  $('#tweets, #phones').hide();
+  $('#tweets .list, #phones .list').html('');
   $('#what-to-say').slideDown(300);
 
   getLegislators($('#zipcode').val(), function (legislators) {
@@ -50,8 +51,9 @@ function submitZipcode() {
       });
     });
 
-    $('#phones').html(phoneFragments);
-    $('#tweets').html(tweetFragments);
+    $('#phones .list').html(phoneFragments);
+    $('#tweets .list').html(tweetFragments);
+    $('#tweets, #phones').show();
 
     $.getScript("http://platform.twitter.com/widgets.js");
   });
