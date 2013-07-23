@@ -48,7 +48,7 @@
         <form>
           <fieldset class="zipcode-search">
             <label>Zip Code</label>
-            <input id="zipcode" class="search" type="text" placeholder="" autofocus>
+            <input type="number" pattern="[0-9]*" maxlength="5" min="0" requried id="zipcode" class="search" type="text" placeholder="" autofocus>
             <button type="submit" class="btn" id="submit-zipcode">Search</button>
           </fieldset>
         </form>
