@@ -41,6 +41,16 @@
  		<div class="content-container">
         <h1>Defund the NSA</h1>
       <div class="box">
+        <form>
+          <fieldset class="zipcode-search">
+            <label for="zipcode">Zip Code</label>
+            <input pattern="\d{5}" title="The zip code should consist of five numbers only" requried id="zipcode" class="search" type="text" placeholder="" autofocus>
+            <input type="submit" class="btn" id="submit-zipcode" value="Search" />
+
+          </fieldset>
+        </form>
+      </div>
+      <div class="box">
         <span class="intro">Dear Internet:</span>
 
         <p class="tagline">It’s been a little over a month since the NSA’s dragnet surveillance program was leaked to the public. Tomorrow there is a crucial vote that could defund part of the NSA’s surveillance infrastructure. </p>
@@ -64,16 +74,6 @@
 
       </div>
 
-      <div class="box">
-        <form>
-          <fieldset class="zipcode-search">
-            <label for="zipcode">Zip Code</label>
-            <input pattern="\d{5}" title="The zip code should consist of five numbers only" requried id="zipcode" class="search" type="text" placeholder="" autofocus>
-            <input type="submit" class="btn" id="submit-zipcode" value="Search" />
-
-          </fieldset>
-        </form>
-      </div>
     </div>
   </body>
 </html>
