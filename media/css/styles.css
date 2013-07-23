@@ -5,7 +5,7 @@ html {
 body {
 	font-family:"ff-dagny-web-pro",sans-serif;
 	color: #484848;
-  padding: 50px 0 0 0;
+  padding: 25px 0 0 0;
   background: #ecf0f1;
   line-height: 1.5;
 }
@@ -13,7 +13,9 @@ body {
 	width: 700px;
 	margin: 0 auto;
 }
-
+strong {
+  font-weight: bold;
+}
 h1 {
   font-size: 38px;
 }
@@ -90,7 +92,7 @@ form {
   border: 1px solid #ebebeb;
 color: #444;
 padding-left: 10px;
-width: 80px;
+width: 100px;
 padding-right: 10px;
 }
 blockquote {
