@@ -54,7 +54,7 @@ p {
   font-weight: bold;
 }
 form {
-  padding: 50px;
+  padding: 30px;
 }
 
 .box {
@@ -126,4 +126,11 @@ padding-right: 10px;
   background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
   background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
   background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+}
+
+#tweets.loading {
+  padding: 20px;
+  text-align:center;
+  content: 'Loading...';
+  background: url(../images/ajax-loader.gif) no-repeat center center;
 }

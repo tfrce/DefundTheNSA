@@ -13,7 +13,10 @@ function getLegislators(zip, cb) {
 }
 
 function submitZipcode() {
+  $('#tweets').html('').addClass('loading');
   getLegislators($('#zipcode').val(), function (legislators) {
+    $('#tweets').removeClass('loading');
+
     var htmlFragment = '';
     var tweet_template = $('#tweet-template').html();
     legislators.filter(function (legislator) {
