@@ -72,13 +72,19 @@
         <div id="legislators">
 
           <div id="phones">
-            <span class="intro">Call</span>
-            <div class="list"></div>
+            <span class="intro">1) Call</span>
+            <table>
+              <thead>
+                <th>Name</th>
+                <th>Number</th>
+              </thead>
+            <tbody class="list"></tbody>
+            </table>
            <!-- Fills with phone numbers for the given zipcode's legislators -->
           </div>
 
           <div id="tweets">
-            <span class="intro">Tweet</span>
+            <span class="intro">2) Tweet</span>
             <div class="list"></div>
            <!-- Fills with tweet cards for the given zipcode's legislators -->
           </div>
@@ -132,10 +138,10 @@
       </script>
 
       <script type="text/template" id="phone-template">
-       <div class="vcard">
-        <span class="fn"><%= name %></span>
-        <span class="tel"><%= phone %></div>
-       </div>
+       <tr class="vcard">
+        <td class="fn"><%= name %></td>
+        <td class="tel"><%= phone %></td>
+       </tr>
       </script>
 
       <script type="text/template" id="tweet-template">

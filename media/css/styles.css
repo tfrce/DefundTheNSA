@@ -42,6 +42,7 @@ form {
   padding: 10px;
   border: 1px dashed #efefef;
   background: #F0EFDF;
+  margin-bottom: 5px;
 }
 .box {
   background-color:white;
@@ -136,4 +137,14 @@ blockquote {
   padding: 5px;
   text-align: right;
   font-size: 12px;
+}
+#tweets {
+  margin-top: 20px;
+}
+table {
+  width: 400px;
+}
+table th {
+  font-weight: bold;
+  text-align: left;
 }
