@@ -62,7 +62,7 @@ function submitZipcode() {
 $(function () {
   $('form').submit(function () {
     submitZipcode();
-
+    _trackEvent('action', 'zipcode-lookup', 'defund', 1, false);
     return false;
   });
 });
