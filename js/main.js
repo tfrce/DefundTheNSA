@@ -69,6 +69,8 @@ $(function () {
     $('#tweets').fadeIn(300);
     $('#thankyou').fadeIn(300);
     $('.called').hide();
+    $('#what-to-say').slideUp(300);
+    $('#phones').slideUp(300);
     _gaq.push(['_trackEvent', 'action', 'called']);
 
   })
