@@ -1,9 +1,12 @@
-/*globals $:true*/
+/*globals $:true, _:true*/
 
 var CONGRESS_URL = 'http://congress.api.sunlightfoundation.com';
 var API_KEY = '8d0caa0295254038a5b61878a06d80ec';
 
 var TWEET_MESSAGE = 'Lorem ipsum, etc., etc.,';
+
+var tweetTemplate = $('#tweet-template').html();
+var phoneTemplate = $('#phone-template').html();
 
 function getLegislators(zip, cb) {
   $.getJSON(CONGRESS_URL + '/legislators/locate?apikey=' + API_KEY + '&zip=' +
@@ -17,19 +20,30 @@ function submitZipcode() {
   getLegislators($('#zipcode').val(), function (legislators) {
     $('#tweets').removeClass('loading');
 
-    var htmlFragment = '';
-    var tweet_template = $('#tweet-template').html();
-    legislators.filter(function (legislator) {
-      // Filter to legislators who have Twitter handles and are house
-      // representatives
-      return legislator.twitter_id !== '' &&
-        legislator.chamber === 'house';
-    }).forEach(function (legislator) {
-      htmlFragment += _.template(tweet_template, {legislator: legislator, message: TWEET_MESSAGE})
+    var tweetFragments = '';
+    var phoneFragments = '';
 
+    legislators.filter(function (legislator) {
+      return legislator.chamber === 'house';
+    }).forEach(function (legislator) {
+      phoneFragments += _.template(phoneTemplate, {
+        name: legislator.first_name + legislator.last_name,
+        phone: legislator.phone
+      });
     });
 
-    $('#tweets').html(htmlFragment);
+    legislators.filter(function (legislator) {
+      return legislator.chamber === 'house' &&
+        legislator.twitter_id !== '';
+    }).forEach(function (legislator) {
+      tweetFragments += _.template(tweetTemplate, {
+        legislator: legislator,
+        message: TWEET_MESSAGE
+      });
+    });
+
+    $('#phones').html(phoneFragments);
+    $('#tweets').html(tweetFragments);
 
     $.getScript("http://platform.twitter.com/widgets.js");
   });
