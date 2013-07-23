@@ -55,7 +55,8 @@ function submitZipcode() {
 
     phoneFragments = phoneFragments || notFoundTemplate;
     tweetFragments = tweetFragments || notFoundTemplate;
-
+    $('.called').show();
+    $('#thankyou').hide(300);
     $('#phones .list').html(phoneFragments);
     $('#tweets .list').html(tweetFragments);
     $('#phones').show();
