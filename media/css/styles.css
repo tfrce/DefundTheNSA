@@ -49,7 +49,7 @@ form {
   padding:20px;
 }
 .zipcode-search  {
-  width: 385px;
+  width: 405px;
   margin: auto;
 }
 .zipcode-search input,
@@ -74,7 +74,7 @@ form {
   border: 1px solid #ebebeb;
 color: #444;
 padding-left: 10px;
-width: 60px;
+width: 80px;
 padding-right: 10px;
 }
 .btn {
