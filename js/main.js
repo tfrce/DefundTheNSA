@@ -4,7 +4,7 @@ var CONGRESS_URL = 'http://congress.api.sunlightfoundation.com';
 var API_KEY = '8d0caa0295254038a5b61878a06d80ec';
 
 var TWEET_MESSAGE = 'I\'m one of your constituents. Please support the Amash ' +
-  'amendment to curtail the NSA\'s unconstitutional surveillance. #defundthensa';
+  'amendment to curtail unconstitutional NSA surveillance. #defundnsa';
 
 function getLegislators(zip, cb) {
   $.getJSON(CONGRESS_URL + '/legislators/locate?apikey=' + API_KEY + '&zip=' +
