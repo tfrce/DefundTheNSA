@@ -14,11 +14,12 @@ function getLegislators(zip, cb) {
 }
 
 function submitZipcode() {
-  $('#tweets').html('').addClass('loading');
+  $('#legislators').addClass('loading');
+  $('#tweets, #phones').html('');
   $('#what-to-say').slideDown(300);
 
   getLegislators($('#zipcode').val(), function (legislators) {
-    $('#tweets').removeClass('loading');
+    $('#legislators').removeClass('loading');
 
     var tweetTemplate = $('#tweet-template').html();
     var phoneTemplate = $('#phone-template').html();
