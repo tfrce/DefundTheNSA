@@ -82,28 +82,40 @@
         <p>This bill won’t pass without our support. Show you care about privacy. Call now.</p>
       </div>
 
-    <script type="text/template" id="not-found-template">
-     <p>Nothing found for this zipcode</p>
-    </script>
+      <script type="text/template" id="not-found-template">
+       <p>Nothing found for this zipcode</p>
+      </script>
 
-    <script type="text/template" id="phone-template">
-     <div class="vcard">
-      <span class="fn"><%= name %></span>
-      <span class="tel"><%= phone %></div>
-     </div>
-    </script>
+      <script type="text/template" id="phone-template">
+       <div class="vcard">
+        <span class="fn"><%= name %></span>
+        <span class="tel"><%= phone %></div>
+       </div>
+      </script>
 
-    <script type="text/template" id="tweet-template">
-     <div class="clearfix" style="margin-top: 20px; font-size: 14px;">
-      <div class=""><%= message %></div>
+      <script type="text/template" id="tweet-template">
+       <div class="clearfix" style="margin-top: 20px; font-size: 14px;">
+        <div class=""><%= message %></div>
 
-      <div class="span2" id="<%= legislator.twitter_id %>">
-       <a href="https://twitter.com/intent/tweet?screen_name=<%=legislator.twitter_id %>&text=<%= message %>"
-        class="twitter-mention-button legislator-tweet"
-        url="http://defundthensa.com/" data-lang="en" data-count="none"
-        data-size="large" data-counturl="http://defundthensa.com/">Tweet to @<%= legislator.twitter_id %></a>
+        <div class="span2" id="<%= legislator.twitter_id %>">
+         <a href="https://twitter.com/intent/tweet?screen_name=<%=legislator.twitter_id %>&text=<%= message %>"
+          class="twitter-mention-button legislator-tweet"
+          url="http://defundthensa.com/" data-lang="en" data-count="none"
+          data-size="large" data-counturl="http://defundthensa.com/">Tweet to @<%= legislator.twitter_id %></a>
+        </div>
+       </div>
+      </script>
+      <div class="share-container box">
+        <span class="intro">Spread the word</span>
+        <div style="clear: both;"></div>
+        <span class='st_facebook_vcount' displayText='Facebook'></span>
+        <span class='st_twitter_vcount' displayText='Tweet'></span>
+        <span class='st_linkedin_vcount' displayText='LinkedIn'></span>
+        <span class='st_googleplus_vcount' displayText='Google +'></span>
       </div>
-     </div>
-    </script>
+
+      <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+      <script type="text/javascript">stLight.options({publisher: "ur-e67c8e2c-67dd-9f3b-aeb9-595ee58115cc", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+    </div>
   </body>
 </html>
