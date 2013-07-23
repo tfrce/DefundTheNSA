@@ -14,18 +14,20 @@ function getLegislators(zip, cb) {
 
 function submitZipcode() {
   getLegislators($('#zipcode').val(), function (legislators) {
-    console.log(legislators);
     var htmlFragment = '';
 
     legislators.filter(function (legislator) {
-      return legislator.twitter_id !== '';
+      // Filter to legislators who have Twitter handles and are house
+      // representatives
+      return legislator.twitter_id !== '' &&
+        legislator.chamber === 'house';
     }).forEach(function (legislator) {
-      htmlFragment += '<div class="legtweet clearfix" style="margin-top: 20px; font-size: 14px;"><div class="">' +
+      htmlFragment += '<div class="legtweet clearfix" style="margin-top: 20px; font-size: 14px;"><div>' +
         TWEET_MESSAGE + '</div><div class="span2" id="' +
         legislator.twitter_id +
         '"><a href="https://twitter.com/intent/tweet?screen_name=' +
         legislator.twitter_id +
-        '" class="twitter-mention-button legislatortweet" url="http://defundthensa.com" data-lang="en" data-count="none" data-size="large" data-counturl="http://defundthensa.com">Tweet to @' +
+        '" class="twitter-mention-button legislatortweet" url="http://defundthensa.com/" data-lang="en" data-count="none" data-size="large" data-counturl="http://defundthensa.com/">Tweet to @' +
         legislator.twitter_id + '</a></div></div>';
     });
 
