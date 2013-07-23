@@ -58,14 +58,20 @@ function submitZipcode() {
 
     $('#phones .list').html(phoneFragments);
     $('#tweets .list').html(tweetFragments);
-
-    $('#tweets, #phones').show();
+    $('#phones').show();
 
     $.getScript("http://platform.twitter.com/widgets.js");
   });
 }
 
 $(function () {
+  $('.called').on('click', function () {
+    $('#tweets').fadeIn(300);
+    $('#thankyou').fadeIn(300);
+    $('.called').hide();
+    ga('send', 'event', 'Actions', 'called');
+
+  })
   $('form').submit(function () {
     submitZipcode();
     ga('send', 'event', 'Actions', 'zipcode-lookup');
