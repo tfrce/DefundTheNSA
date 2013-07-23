@@ -1,12 +1,5 @@
 /*globals $:true*/
 
-$(function () {
-  $('#tweet-reps, #tweet-leg').click(function () {
-    $('#tweet-leg').hide();
-    $('.tweet-box').slideDown();
-  });
-});
-
 var CONGRESS_URL = 'http://congress.api.sunlightfoundation.com';
 var API_KEY = '8d0caa0295254038a5b61878a06d80ec';
 
@@ -17,13 +10,11 @@ function getLegislators(zip, cb) {
   });
 }
 
-$(function () {
-  getLegislators('98004', function (legislators) {
+function submitZipcode() {
+  getLegislators($('#zipcode').val(), function (legislators) {
     console.log(legislators);
   });
-});
 
-function submitZip() {
   /*
   for (var i = 0; i < a.length; i++) {
     if (a[i].legislator['twitter_id'] != '') {
@@ -58,12 +49,18 @@ function submitZip() {
   $.getScript("http://platform.twitter.com/widgets.js");
 }
 
-$('.get-legislators').click(function () {
-  submitZip();
-});
+$(function () {
+  $('#submit-zipcode').click(function (e) {
+    e.preventDefault();
 
-$('input.zip').keypress(function (e) {
-  if (e.which === 13) {
-    submitZip();
-  }
+    submitZipcode();
+  });
+
+  $('#zipcode').keypress(function (e) {
+    if (e.which === 13) {
+      e.preventDefault();
+
+      submitZipcode();
+    }
+  });
 });
