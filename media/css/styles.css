@@ -67,7 +67,7 @@ form {
   margin-bottom: 0;
 }
 .zipcode-search  {
-  width: 405px;
+  width: 440px;
   margin: auto;
 }
 .zipcode-search input,
@@ -122,6 +122,9 @@ blockquote {
   max-width: 160px;
   display: block;
   cursor: pointer;
+}
+#submit-zipcode.btn {
+  max-width: 200px !important;
 }
 .btn:hover {
   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
