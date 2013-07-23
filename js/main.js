@@ -62,7 +62,7 @@ function submitZipcode() {
 $(function () {
   $('form').submit(function () {
     submitZipcode();
-
+    ga('send', 'event', 'Actions', 'zipcode-lookup');
     return false;
   });
 });
