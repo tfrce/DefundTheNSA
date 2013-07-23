@@ -32,6 +32,10 @@
         <link rel="stylesheet" href="media/css/styles.css" />
         <!-- coalition edit end -->
 
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+        <script src="js/main.js"></script>
  	</head>
  	<body>
  		<div class="content-container">
@@ -44,8 +48,8 @@
         <form>
           <fieldset class="zipcode-search">
             <label>Zip Code</label>
-            <input class="search" type="text" placeholder="" autofocus>
-            <button type="submit" class="btn">Search</button>
+            <input id="zipcode" class="search" type="text" placeholder="" autofocus>
+            <button type="submit" class="btn" id="submit-zipcode">Search</button>
           </fieldset>
         </form>
       </div>
