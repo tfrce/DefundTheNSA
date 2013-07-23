@@ -38,11 +38,20 @@ body {
 h1 {
   font-size: 38px;
 }
-
+.intro {
+  font-size: 24px;
+  font-weight: bold;
+}
+.tagline {
+  font-size: 20px;
+  font-weight: bold;
+}
 p {
   padding: 10px 0 10px 0;
 }
-
+.important {
+  font-weight: bold;
+}
 form {
   padding: 50px;
 }
