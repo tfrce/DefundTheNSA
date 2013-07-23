@@ -14,13 +14,16 @@ function getLegislators(zip, cb) {
 
 function submitZipcode() {
   getLegislators($('#zipcode').val(), function (legislators) {
-    console.log(legislators);
     var htmlFragment = '';
     var tweet_template = $('#tweet-template').html();
     legislators.filter(function (legislator) {
-      return legislator.twitter_id !== '';
+      // Filter to legislators who have Twitter handles and are house
+      // representatives
+      return legislator.twitter_id !== '' &&
+        legislator.chamber === 'house';
     }).forEach(function (legislator) {
       htmlFragment += _.template(tweet_template, {legislator: legislator, message: TWEET_MESSAGE})
+
     });
 
     $('#tweets').html(htmlFragment);
