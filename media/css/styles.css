@@ -73,8 +73,9 @@ form {
   font-size: 22px;
   border: 1px solid #ebebeb;
 color: #444;
+margin-left: 60px;
 padding-left: 10px;
-width: 80px;
+width: 120px;
 padding-right: 10px;
 }
 .btn {
