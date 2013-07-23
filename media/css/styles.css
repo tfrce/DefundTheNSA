@@ -1,21 +1,21 @@
 @font-face {
   font-family: 'OpenSansLightRegular';
-  src: url('/media/opensans-light-webfont.eot');
-  src: url('/media/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
-     url('/media/opensans-light-webfont.woff') format('woff'),
-     url('/media/opensans-light-webfont.ttf') format('truetype'),
-     url('/media/opensans-light-webfont.svg#OpenSansLightRegular') format('svg');
+  src: url('../opensans-light-webfont.eot');
+  src: url('../opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+     url('../opensans-light-webfont.woff') format('woff'),
+     url('../opensans-light-webfont.ttf') format('truetype'),
+     url('../opensans-light-webfont.svg#OpenSansLightRegular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'OpenSansRegular';
-  src: url('/media/opensans-regular-webfont.eot');
-  src: url('/media/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
-     url('/media/opensans-regular-webfont.woff') format('woff'),
-     url('/media/opensans-regular-webfont.ttf') format('truetype'),
-     url('/media/opensans-regular-webfont.svg#OpenSansRegular') format('svg');
+  src: url('../opensans-regular-webfont.eot');
+  src: url('../opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+     url('../opensans-regular-webfont.woff') format('woff'),
+     url('../opensans-regular-webfont.ttf') format('truetype'),
+     url('../opensans-regular-webfont.svg#OpenSansRegular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
