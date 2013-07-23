@@ -69,12 +69,12 @@ $(function () {
     $('#tweets').fadeIn(300);
     $('#thankyou').fadeIn(300);
     $('.called').hide();
-    ga('send', 'event', 'Actions', 'called');
+    _gaq.push(['_trackEvent', 'action', 'called']);
 
   })
   $('form').submit(function () {
     submitZipcode();
-    ga('send', 'event', 'Actions', 'zipcode-lookup');
+    _gaq.push(['_trackEvent', 'action', 'zipcode-lookup']);
     return false;
   });
 });
