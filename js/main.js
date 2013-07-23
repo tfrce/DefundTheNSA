@@ -5,9 +5,6 @@ var API_KEY = '8d0caa0295254038a5b61878a06d80ec';
 
 var TWEET_MESSAGE = 'Lorem ipsum, etc., etc.,';
 
-var tweetTemplate = $('#tweet-template').html();
-var phoneTemplate = $('#phone-template').html();
-
 function getLegislators(zip, cb) {
   $.getJSON(CONGRESS_URL + '/legislators/locate?apikey=' + API_KEY + '&zip=' +
     zip, function (legislators) {
@@ -17,8 +14,12 @@ function getLegislators(zip, cb) {
 
 function submitZipcode() {
   $('#tweets').html('').addClass('loading');
+
   getLegislators($('#zipcode').val(), function (legislators) {
     $('#tweets').removeClass('loading');
+
+    var tweetTemplate = $('#tweet-template').html();
+    var phoneTemplate = $('#phone-template').html();
 
     var tweetFragments = '';
     var phoneFragments = '';
@@ -27,7 +28,11 @@ function submitZipcode() {
       return legislator.chamber === 'house';
     }).forEach(function (legislator) {
       phoneFragments += _.template(phoneTemplate, {
-        name: legislator.first_name + legislator.last_name,
+        name: [
+          legislator.first_name,
+          legislator.middle_name,
+          legislator.last_name
+        ].join(' '),
         phone: legislator.phone
       });
     });
