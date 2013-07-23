@@ -75,7 +75,7 @@ $(function () {
     _gaq.push(['_trackEvent', 'action', 'called']);
 
   })
-  $('form').submit(function () {
+  $('form.zipcodeform').submit(function () {
     submitZipcode();
     _gaq.push(['_trackEvent', 'action', 'zipcode-lookup']);
     return false;
