@@ -34,7 +34,15 @@ p {
 form {
   padding: 20px;
 }
-
+#what-to-say {
+  display: none;
+  margin-bottom: 20px;
+}
+.what-to-say-text {
+  padding: 10px;
+  border: 1px dashed #efefef;
+  background: #f2f2f2;
+}
 .box {
   background-color:white;
   -moz-box-shadow: 0 0 3px 1px rgba(0,0,0,.05), 0 1px 2px 0px rgba(0,0,0,.1);

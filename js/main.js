@@ -15,6 +15,7 @@ function getLegislators(zip, cb) {
 
 function submitZipcode() {
   $('#tweets').html('').addClass('loading');
+  $('#what-to-say').slideDown(300);
 
   getLegislators($('#zipcode').val(), function (legislators) {
     $('#tweets').removeClass('loading');
