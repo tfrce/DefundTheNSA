@@ -46,7 +46,7 @@
         <form style="" >
           <fieldset class="zipcode-search">
             <label for="zipcode">Zip Code</label>
-            <input pattern="\d{5}" title="The zip code should consist of five numbers only" requried id="zipcode" class="search" type="text" placeholder="Zipcode..." autofocus>
+            <input pattern="\d{5}" title="The zip code should consist of five numbers only" requried id="zipcode" class="search" type="text" placeholder="" autofocus>
             <input type="submit" class="btn" id="submit-zipcode" value="Search"  />
 
           </fieldset>
@@ -60,11 +60,16 @@
           </div>
         </div>
         <div id="legislators">
+
           <div id="phones">
+            <span class="intro">Call</span>
+            <div class="list"></div>
            <!-- Fills with phone numbers for the given zipcode's legislators -->
           </div>
 
           <div id="tweets">
+            <span class="intro">Tweet</span>
+            <div class="list"></div>
            <!-- Fills with tweet cards for the given zipcode's legislators -->
           </div>
         </div>

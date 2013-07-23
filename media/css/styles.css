@@ -129,7 +129,9 @@ blockquote {
   content: 'Loading...';
   background: url(../images/ajax-loader.gif) no-repeat center center;
 }
-
+#tweets, #phones {
+  display: none;
+}
 .footer {
   padding: 5px;
   text-align: right;
