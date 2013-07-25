@@ -31,14 +31,7 @@ function submitZipcode() {
 }
 
 $(function () {
-  $('.called').on('click', function () {
-    $('#tweets').fadeIn(300);
-    $('#thankyou').fadeIn(300);
-    $('.called').hide();
-    $('#what-to-say').slideUp(300);
-    $('#phones').slideUp(300);
-    _gaq.push(['_trackEvent', 'action', 'called']);
-  });
+
 
   var contactTemplate = $('#contact-template').html();
 
@@ -46,6 +39,7 @@ $(function () {
     var twitter = $(ev.currentTarget).attr('data-twitter-id');
     var phone = $(ev.currentTarget).attr('data-phone-number');
     var vote = $(ev.currentTarget).attr('data-vote');
+    _gaq.push(['_trackEvent', 'action', 'contact-button-clicked']);
 
     var message;
 
