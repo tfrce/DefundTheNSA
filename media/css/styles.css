@@ -17,8 +17,19 @@ strong {
   font-weight: bold;
 }
 h1 {
-  font-size: 38px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 30px;
+  margin-bottom: 20px
 }
+
+h2 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+
 .intro {
   font-size: 24px;
   font-weight: bold;
@@ -36,6 +47,7 @@ p {
 }
 .important {
   font-weight: bold;
+  text-align: center;
 }
 form {
   padding: 20px;
