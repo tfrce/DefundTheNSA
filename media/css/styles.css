@@ -213,13 +213,19 @@ table td {
   float: left;
 
 }
+
+.voted-for,
 .voted-against {
+  font-weight: bold;
   text-align: center;
-  color: #ff0000;
 }
+
+.voted-against {
+  color: #ff6666;
+}
+
 .voted-for {
-  text-align: center;
-  color: #339933;
+  color: #66cc00;
 }
 
 .yes-table .contact-button {
@@ -228,4 +234,10 @@ table td {
 
 .vote-table-data {
   width: 100%;
+}
+
+.against-column,
+.for-column {
+   width: 310px;
+   float: left;
 }
