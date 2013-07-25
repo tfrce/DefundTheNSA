@@ -80,7 +80,7 @@ $(function () {
     _gaq.push(['_trackEvent', 'action', 'zipcode-lookup']);
     return false;
   });
-  $.getJSON('call.json', function (legislators) {
-    console.log(legislators);
-  });
+  //$.getJSON('call.json', function (legislators) {
+    //console.log(legislators);
+  //});
 });
