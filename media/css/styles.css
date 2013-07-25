@@ -47,6 +47,7 @@ p {
 }
 .important {
   font-weight: bold;
+  text-align: center;
 }
 form {
   padding: 20px;
