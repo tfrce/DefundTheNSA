@@ -24,9 +24,13 @@ var findLegislatorsDetails = function (votes) {
   console.log(vote.legislator[0]['$']['name-id']);
   request.get(CONGRESS_URL + '/legislators?apikey=' + API_KEY + '&bioguide_id=' + vote.legislator[0]['$']['name-id'], function(res){
     vote.details = res.body.results[0];
-    console.log(vote);
+    console.log('Next');
     fullVoteData.votes.push(vote);
-    finalizeResponse();
+    if(votes.length === 0) {
+      finalizeResponse();
+    } else {
+      findLegislatorsDetails(votes);
+    }
   })
 }
 
