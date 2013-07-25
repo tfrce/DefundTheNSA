@@ -62,6 +62,13 @@
 
 
       <div class="box">
+        <span class="intro">1) Sign up for alerts</span>
+        <p>Mailchimp goes here</p>
+        
+        <div style="clear: both;"></div>
+      </div>
+
+      <div class="box">
         <form style="" class="zipcodeform">
           <fieldset class="zipcode-search">
             <label for="zipcode">Zip Code</label>
@@ -87,7 +94,6 @@
       <table class="vote-table-data">
         <thead>
           <th>Legislator</th>
-          <th>Party</th>
         </thead>
         <tbody>
           <% _.each(votes.yes, function(vote){ %>
@@ -97,9 +103,15 @@
   
 
           <span class="leg-name"><%= vote.details.first_name %> <%= vote.details.last_name %></span><br />
-          <span class="leg-contact">Tweet or call</span>
+          <span class="leg-contact">
+    <div class="span2" id="<%= vote.details.twitter_id %>">
+         <a href="https://twitter.com/intent/tweet?screen_name=<%=vote.details.twitter_id %>&text=adadasdasd"
+          class="twitter-mention-button legislator-tweet"
+          url="http://defundthensa.com/" data-lang="en" data-count="none"
+          data-size="large" data-counturl="http://defundthensa.com/">Tweet to @<%= vote.details.twitter_id %></a>
+        </div>
+          </span>
           <!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
-          <td class="tel"><%= vote.details.party %></td>
          </tr>
          <% }); %>
         </tbody>
@@ -111,7 +123,6 @@
       <table class="vote-table-data">
         <thead>
           <th>Republican</th>
-          <th>Blah</th>
         </thead>
         <tbody>
           <% _.each(votes.no, function(vote){ %>
@@ -123,7 +134,6 @@
           <span class="leg-contact">Tweet or call</span>
 
           <!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
-          <td class="tel"><%= vote.details.party %></td>
          </tr>
          <% }); %>
         </tbody>
