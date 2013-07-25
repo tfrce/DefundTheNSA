@@ -64,7 +64,7 @@
         <tbody>
           <% _.each(legislators.votes, function(vote){ %>
          <tr class="vcard">
-          <td class="fn"><%= vote.details.first_name %></td>
+          <td class="fn"><%= vote.details.first_name %><img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture?type=large" /></td>
           <td class="tel"><%= vote.vote[0]%></td>
          </tr>
          <% }); %>
