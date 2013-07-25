@@ -39,11 +39,15 @@ $(function () {
     _gaq.push(['_trackEvent', 'action', 'called']);
 
   })
+  $('body').on('click', '.contact-button', function () {
+    $(".share-container").leanModal();
+  });
   $('body').on('submit', 'form.zipcodeform', function () {
     submitZipcode();
     _gaq.push(['_trackEvent', 'action', 'zipcode-lookup']);
     return false;
   });
+ 
     var callTemplate = $('#call-template').html();
 
   $.getJSON('call.json', function (legislators) {
