@@ -49,6 +49,49 @@
     <div style="text-align: center;">
     <img src="media/images/headertext.png" alt="Tell Congress to Vote Against NSA Surveillance Today" />
     </div>
+      <div class="box vote-table">
+
+      </div>
+
+
+
+      <script type="text/template" id="call-template">
+      <table>
+        <thead>
+          <th>Republican</th>
+          <th>Blah</th>
+        </thead>
+        <tbody>
+          <% _.each(legislators.votes, function(vote){ %>
+         <tr class="vcard">
+          <td class="fn"><%= vote.details.first_name %></td>
+          <td class="tel"><%= vote.vote[0]%></td>
+         </tr>
+         <% }); %>
+        </tbody>
+      </table>
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="box">
         <form style="" class="zipcodeform">
           <fieldset class="zipcode-search">

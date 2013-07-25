@@ -80,7 +80,10 @@ $(function () {
     _gaq.push(['_trackEvent', 'action', 'zipcode-lookup']);
     return false;
   });
-  //$.getJSON('call.json', function (legislators) {
-    //console.log(legislators);
-  //});
+    var callTemplate = $('#call-template').html();
+
+  $.getJSON('call.json', function (legislators) {
+    $('.vote-table').html(_.template(callTemplate, {legislators: legislators}))
+    console.log(legislators);
+  });
 });
