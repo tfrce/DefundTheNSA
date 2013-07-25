@@ -29,7 +29,7 @@ function submitZipcode() {
     $('[data-bio-id="'+legislator.bioguide_id+'"]').show();
 
     });
-
+  $.getScript("http://platform.twitter.com/widgets.js");
 
   });
 }
@@ -59,7 +59,7 @@ $(function () {
       return vote.vote[0] === 'No';
     });
     $('.vote-table').html(_.template(callTemplate, {votes: {yes:yes, no:no}}));
-
+  $.getScript("http://platform.twitter.com/widgets.js");
     console.log(yes, no.length);
   });
 });
