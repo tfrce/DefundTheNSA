@@ -157,3 +157,6 @@ table th {
   font-weight: bold;
   text-align: left;
 }
+.vote-table-data td{
+  padding: 5px;
+}

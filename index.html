@@ -58,7 +58,7 @@
       <script type="text/template" id="call-template">
       <div  style="width: 300px; float: left;">
       <span>Voted Yes</span>
-      <table>
+      <table class="vote-table-data">
         <thead>
           <th>Republican</th>
           <th>Blah</th>
@@ -66,8 +66,8 @@
         <tbody>
           <% _.each(votes.yes, function(vote){ %>
          <tr class="vcard">
-          <td class="fn"><%= vote.details.first_name %> <%= vote.details.last_name %><!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
-          <td class="tel"><%= vote.vote[0]%></td>
+          <td class="fn"><img style="float: left;" src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" /><%= vote.details.first_name %> <%= vote.details.last_name %><!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
+          <td class="tel"></td>
          </tr>
          <% }); %>
         </tbody>
@@ -76,7 +76,7 @@
       <div  style="width: 300px; float: left;">
       <span>Voted No</span>
 
-      <table>
+      <table class="vote-table-data">
         <thead>
           <th>Republican</th>
           <th>Blah</th>
@@ -84,8 +84,8 @@
         <tbody>
           <% _.each(votes.no, function(vote){ %>
          <tr class="vcard">
-          <td class="fn"><%= vote.details.first_name %> <%= vote.details.last_name %><!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
-          <td class="tel"><%= vote.vote[0]%></td>
+          <td class="fn"><img style="float: left;" src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" /><%= vote.details.first_name %> <%= vote.details.last_name %><!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
+          <td class="tel"></td>
          </tr>
          <% }); %>
         </tbody>
