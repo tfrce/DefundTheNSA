@@ -133,6 +133,23 @@ blockquote {
   display: block;
   cursor: pointer;
 }
+.contact-button {
+  border-radius: 3px;
+  background-color: #FF6666;
+  border: 0px;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding : 4px 8px;
+  display: block;
+}
 #submit-zipcode.btn {
   max-width: 200px !important;
 }
@@ -176,6 +193,7 @@ table th {
 .leg-contact {
   margin-left: 5px;
   font-size: 90%;
+  float: left;
 }
 .no-table td {
   margin: 5px;
@@ -189,7 +207,6 @@ table td {
   border: white solid;
 }
 .number-and-twitter {
-  margin-left: 5px;
   float: left;
 
 }
@@ -200,4 +217,9 @@ table td {
 .voted-for {
   text-align: center;
   color: #339933;
+}
+
+.yes-table td .contact-button {
+  background-color: #66cc00;
+
 }
