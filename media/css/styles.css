@@ -179,6 +179,9 @@ blockquote {
   font-size: 12px;
 }
 
+#mc_embed_signup input.button {
+  margin: 0   !important;
+}
 #tweets {
   margin-top: 20px;
 }
