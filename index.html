@@ -66,7 +66,13 @@
         <tbody>
           <% _.each(votes.yes, function(vote){ %>
          <tr class="vcard">
-          <td class="fn"><img style="float: left;" src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" /><%= vote.details.first_name %> <%= vote.details.last_name %><!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
+          <td class="fn">
+          <div style="border: 1px solid #ebebeb; float: left; width: 50px; height: 50px; background: url(https://graph.facebook.com/<%= vote.details.facebook_id %>/picture);"></div>
+  
+
+          <span class="leg-name"><%= vote.details.first_name %> <%= vote.details.last_name %></span><br />
+          <span class="leg-contact">Tweet or call</span>
+          <!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
           <td class="tel"><%= vote.details.party %></td>
          </tr>
          <% }); %>
@@ -84,7 +90,13 @@
         <tbody>
           <% _.each(votes.no, function(vote){ %>
          <tr class="vcard">
-          <td class="fn"><img style="float: left;" src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" /><%= vote.details.first_name %> <%= vote.details.last_name %><!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
+          <td class="fn">
+           <div style="border: 1px solid #ebebeb; float: left; width: 50px; height: 50px; background: url(https://graph.facebook.com/<%= vote.details.facebook_id %>/picture);"></div>
+
+          <span class="leg-name"><%= vote.details.first_name %> <%= vote.details.last_name %></span><br />
+          <span class="leg-contact">Tweet or call</span>
+
+          <!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
           <td class="tel"><%= vote.details.party %></td>
          </tr>
          <% }); %>

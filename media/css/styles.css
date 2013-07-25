@@ -160,3 +160,10 @@ table th {
 .vote-table-data td{
   padding: 5px;
 }
+.leg-name {
+  margin-left: 5px;
+}
+.leg-contact {
+  margin-left: 5px;
+  font-size: 90%;
+}
