@@ -119,7 +119,7 @@
 
       <script type="text/template" id="contact-template">
         <% if(twitter.length > 0) { %>
-        <a href="https://twitter.com/intent/tweet?screen_name=<%=twitter%>&text=adadasdasd"
+        <a href="https://twitter.com/intent/tweet?screen_name=<%=twitter%>&text=<%=message%>"
           class="twitter-mention-button legislator-tweet"
           url="http://defundthensa.com/" data-lang="en" data-count="none"
           data-size="small" data-counturl="http://defundthensa.com/">Tweet to @<%=twitter%></a><br /> or call <%=phone%>
@@ -156,7 +156,7 @@
 
           <span class="leg-name"><%= vote.details.first_name %> <%= vote.details.last_name %></span><br />
           <div class="leg-contact">
-            <button data-twitter-id="<%= vote.details.twitter_id %>" data-phone-number="<%= vote.details.phone %>" class="contact-button">Tweet or call</button>
+            <button data-vote="<%= vote.vote[0] %>" data-twitter-id="<%= vote.details.twitter_id %>" data-phone-number="<%= vote.details.phone %>" class="contact-button">Tweet or call</button>
             <div class="number-and-twitter" style="display: none;"></div>
           </div>
           <!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>

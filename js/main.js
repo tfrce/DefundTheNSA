@@ -51,9 +51,15 @@ $(function () {
   $('body').on('click', '.contact-button', function (ev) {
     var twitter = $(ev.currentTarget).attr('data-twitter-id');
     var phone = $(ev.currentTarget).attr('data-phone-number');
+    var vote = $(ev.currentTarget).attr('data-vote');
+    if(vote === 'No') {
+      message = "I'm ashamed that my legislator has voted to continue unconstitutional invasion of my privacy";
+    } else {
+      message = "Thanks for voting to protect my privacy! I'm here to encourage you to keep up the good work.";
+    }
     $(ev.currentTarget).hide();
     $('.number-and-twitter', $(ev.currentTarget).parents('.leg-contact')).show();
-    $('.number-and-twitter', $(ev.currentTarget).parents('.leg-contact')).html(_.template(contactTemplate, {twitter: twitter, phone: phone}));
+    $('.number-and-twitter', $(ev.currentTarget).parents('.leg-contact')).html(_.template(contactTemplate, {message:message, twitter: twitter, phone: phone}));
      $.getScript("http://platform.twitter.com/widgets.js");
   });
   $('body').on('submit', 'form.zipcodeform', function () {
