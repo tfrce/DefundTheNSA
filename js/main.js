@@ -83,7 +83,14 @@ $(function () {
     var callTemplate = $('#call-template').html();
 
   $.getJSON('call.json', function (legislators) {
-    $('.vote-table').html(_.template(callTemplate, {legislators: legislators}))
-    console.log(legislators);
+    var yes = _.filter(legislators.votes, function (vote){
+      return vote.vote[0] === 'Aye';
+    });
+    var no = _.filter(legislators.votes, function (vote){
+      return vote.vote[0] === 'No';
+    });
+    $('.vote-table').html(_.template(callTemplate, {votes: {yes:yes, no:no}}));
+
+    console.log(yes.length, no.length);
   });
 });
