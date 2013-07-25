@@ -20,48 +20,17 @@ function submitZipcode() {
   $('#what-to-say').slideDown(300);
 
   getLegislators($('#zipcode').val(), function (legislators) {
-    $('#legislators').removeClass('loading');
 
-    var tweetTemplate = $('#tweet-template').html();
-    var phoneTemplate = $('#phone-template').html();
-
-    var notFoundTemplate = $('#not-found-template').html();
-
-    var tweetFragments = '';
-    var phoneFragments = '';
-
+    $('[data-bio-id]').hide();
     legislators.filter(function (legislator) {
       return legislator.chamber === 'house';
     }).forEach(function (legislator) {
-      phoneFragments += _.template(phoneTemplate, {
-        name: [
-          legislator.first_name,
-          legislator.middle_name,
-          legislator.last_name
-        ].join(' '),
-        phone: legislator.phone
-      });
+      console.log(legislator)
+    $('[data-bio-id="'+legislator.bioguide_id+'"]').show();
+
     });
 
-    legislators.filter(function (legislator) {
-      return legislator.chamber === 'house' &&
-        legislator.twitter_id !== '';
-    }).forEach(function (legislator) {
-      tweetFragments += _.template(tweetTemplate, {
-        legislator: legislator,
-        message: TWEET_MESSAGE
-      });
-    });
 
-    phoneFragments = phoneFragments || notFoundTemplate;
-    tweetFragments = tweetFragments || notFoundTemplate;
-    $('.called').show();
-    $('#thankyou').hide(300);
-    $('#phones .list').html(phoneFragments);
-    $('#tweets .list').html(tweetFragments);
-    $('#phones').show();
-
-    $.getScript("http://platform.twitter.com/widgets.js");
   });
 }
 

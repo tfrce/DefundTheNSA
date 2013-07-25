@@ -49,6 +49,23 @@
     <div style="text-align: center;">
     <img src="media/images/headertext.png" alt="Tell Congress to Vote Against NSA Surveillance Today" />
     </div>
+
+
+
+      <div class="box">
+        <form style="" class="zipcodeform">
+          <fieldset class="zipcode-search">
+            <label for="zipcode">Zip Code</label>
+            <input pattern="\d{5}" title="The zip code should consist of five numbers only"
+             required id="zipcode" class="search" type="text" placeholder=""
+             autofocus>
+            <input type="submit" class="btn" id="submit-zipcode" value="Find your legislators"  />
+
+          </fieldset>
+        </form>
+        <div style="clear: both;"></div>
+      </div>
+
       <div class="box vote-table">
 
       </div>
@@ -65,7 +82,7 @@
         </thead>
         <tbody>
           <% _.each(votes.yes, function(vote){ %>
-         <tr class="vcard">
+         <tr class="leg-row" data-bio-id="<%= vote.details.bioguide_id %>">
           <td class="fn">
           <div style="border: 1px solid #ebebeb; float: left; width: 50px; height: 50px; background: url(https://graph.facebook.com/<%= vote.details.facebook_id %>/picture);"></div>
   
@@ -89,7 +106,7 @@
         </thead>
         <tbody>
           <% _.each(votes.no, function(vote){ %>
-         <tr class="vcard">
+         <tr class="leg-row" data-bio-id="<%= vote.details.bioguide_id %>">
           <td class="fn">
            <div style="border: 1px solid #ebebeb; float: left; width: 50px; height: 50px; background: url(https://graph.facebook.com/<%= vote.details.facebook_id %>/picture);"></div>
 
