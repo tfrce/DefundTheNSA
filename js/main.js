@@ -45,7 +45,7 @@ $(function () {
     var twitter = $(ev.currentTarget).attr('data-twitter-id');
     var phone = $(ev.currentTarget).attr('data-phone-number');
     var vote = $(ev.currentTarget).attr('data-vote');
-    if(vote === 'No') {
+    if(vote !== 'Aye') {
       message = "I'm ashamed that my legislator has voted to continue unconstitutional invasion of my privacy";
     } else {
       message = "Thanks for voting to protect my privacy! I'm here to encourage you to keep up the good work.";

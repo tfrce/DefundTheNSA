@@ -223,3 +223,6 @@ table td {
   background-color: #66cc00;
 
 }
+.yes-table, .no-table {
+  width: 100%;
+}
