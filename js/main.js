@@ -39,8 +39,13 @@ $(function () {
     _gaq.push(['_trackEvent', 'action', 'called']);
 
   })
+    var contactTemplate = $('#contact-template').html();
+
   $('body').on('click', '.contact-button', function (ev) {
-    $('.number-and-twitter', $(ev.currentTarget).parents('td')).show();
+    $(ev.currentTarget).hide();
+    $('.number-and-twitter', $(ev.currentTarget).parents('.leg-contact')).show();
+    $('.number-and-twitter', $(ev.currentTarget).parents('.leg-contact')).html(_.template(contactTemplate, {}));
+     $.getScript("http://platform.twitter.com/widgets.js");
   });
   $('body').on('submit', 'form.zipcodeform', function () {
     submitZipcode();
