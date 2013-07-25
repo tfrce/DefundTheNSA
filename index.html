@@ -60,14 +60,14 @@
       <span>Voted Yes</span>
       <table class="vote-table-data">
         <thead>
-          <th>Republican</th>
-          <th>Blah</th>
+          <th>Legislator</th>
+          <th>Party</th>
         </thead>
         <tbody>
           <% _.each(votes.yes, function(vote){ %>
          <tr class="vcard">
           <td class="fn"><img style="float: left;" src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" /><%= vote.details.first_name %> <%= vote.details.last_name %><!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
-          <td class="tel"></td>
+          <td class="tel"><%= vote.details.party %></td>
          </tr>
          <% }); %>
         </tbody>
@@ -85,7 +85,7 @@
           <% _.each(votes.no, function(vote){ %>
          <tr class="vcard">
           <td class="fn"><img style="float: left;" src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" /><%= vote.details.first_name %> <%= vote.details.last_name %><!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
-          <td class="tel"></td>
+          <td class="tel"><%= vote.details.party %></td>
          </tr>
          <% }); %>
         </tbody>

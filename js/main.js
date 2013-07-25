@@ -91,6 +91,6 @@ $(function () {
     });
     $('.vote-table').html(_.template(callTemplate, {votes: {yes:yes, no:no}}));
 
-    console.log(yes.length, no.length);
+    console.log(yes, no.length);
   });
 });
