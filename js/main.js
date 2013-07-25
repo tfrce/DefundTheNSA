@@ -45,10 +45,10 @@ $(function () {
 
     if (vote !== 'Aye') {
       message = "It's shameful that you voted for unconstitutional record " +
-        "collection instead of #privacy! #defundNSA http://defundthensa.com/";
+        "collection instead of privacy! http://defundthensa.com/ #defundNSA";
     } else {
       message = "Thank you for supporting #privacy! You're earning my vote, " +
-        "keep up the good work! #defundNSA http://defundthensa.com/";
+        "keep up the good work! http://defundthensa.com/ #defundNSA";
     }
 
     $(ev.currentTarget).hide();
