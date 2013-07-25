@@ -172,3 +172,9 @@ table th {
   float: left;
 
 }
+.voted-against {
+  color: #ff0000;
+}
+.voted-for {
+  color: #00ff00;
+}
