@@ -39,8 +39,8 @@ $(function () {
     _gaq.push(['_trackEvent', 'action', 'called']);
 
   })
-  $('body').on('click', '.contact-button', function () {
-    $(".share-container").leanModal();
+  $('body').on('click', '.contact-button', function (ev) {
+    $('.number-and-twitter', $(ev.currentTarget).parents('td')).show();
   });
   $('body').on('submit', 'form.zipcodeform', function () {
     submitZipcode();

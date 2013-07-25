@@ -17,19 +17,8 @@ strong {
   font-weight: bold;
 }
 h1 {
-  text-align: center;
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 30px;
-  margin-bottom: 20px
+  font-size: 38px;
 }
-
-h2 {
-  font-size: 24px;
-  text-align: center;
-  font-weight: bold;
-}
-
 .intro {
   font-size: 24px;
   font-weight: bold;
@@ -47,7 +36,6 @@ p {
 }
 .important {
   font-weight: bold;
-  text-align: center;
 }
 form {
   padding: 20px;
@@ -178,14 +166,4 @@ table th {
 .leg-contact {
   margin-left: 5px;
   font-size: 90%;
-}
-#lean_overlay {
-    position: fixed;
-    z-index:100;
-    top: 0px;
-    left: 0px;
-    height:100%;
-    width:100%;
-    background: #000;
-    display: none;
 }

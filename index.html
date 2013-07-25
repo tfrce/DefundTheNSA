@@ -39,7 +39,6 @@
   <script src="media/js/lodash.min.js"></script>
 
   <script src="js/main.js"></script>
-  <script src="js/jquery.leanModal.min.js"></script>
 
   <script type="text/javascript" src="//use.typekit.net/yir5vvx.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -101,8 +100,6 @@
       <h2>2. The roll call</h2>
       <p class="important">Tell your representative what you think about how they voted.</p>
 
-
-
       <div class="box vote-table">
 
       </div>
@@ -110,7 +107,6 @@
 
 
       <script type="text/template" id="call-template">
-        <span class="intro">2) The roll call</span>
       <form style="" class="zipcodeform">
 
           <fieldset class="zipcode-search">
@@ -138,12 +134,14 @@
 
           <span class="leg-name"><%= vote.details.first_name %> <%= vote.details.last_name %></span><br />
           <span class="leg-contact"><button class="contact-button">Tweet or call</button>
-    <!--<div class="span2" id="<%= vote.details.twitter_id %>">
+          <div class="number-and-twitter" style="display: none;">asdadas<!--
+    <div class="span2" id="<%= vote.details.twitter_id %>">
          <a href="https://twitter.com/intent/tweet?screen_name=<%=vote.details.twitter_id %>&text=adadasdasd"
           class="twitter-mention-button legislator-tweet"
           url="http://defundthensa.com/" data-lang="en" data-count="none"
           data-size="large" data-counturl="http://defundthensa.com/">Tweet to @<%= vote.details.twitter_id %></a>
         </div>-->
+        </div>
           </span>
           <!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
          </tr>
