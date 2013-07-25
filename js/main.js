@@ -1,6 +1,6 @@
 /*globals $:true, _:true, _gaq:true*/
 
-var CONGRESS_URL = 'http://congress.api.sunlightfoundation.com';
+var CONGRESS_URL = 'https://congress.api.sunlightfoundation.com';
 var API_KEY = '8d0caa0295254038a5b61878a06d80ec';
 
 var BAD_TWITTER_HANDLES = [
