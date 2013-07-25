@@ -115,6 +115,7 @@
           </fieldset>
         </form>
         <div style="clear: both;"></div>
+
       <div class="for-column">
       <p class="voted-for">Voted for the amendment and against NSA surveillance.</p>
       <table class="vote-table-data yes-table" cellspacing="10">
@@ -122,19 +123,17 @@
           <th>Legislator</th>
         </thead>
         <tbody>
-          <% _.each(votes.yes, function(vote){ %>
+         <% _.each(votes.yes, function(vote){ %>
          <tr class="leg-row" data-bio-id="<%= vote.details.bioguide_id %>">
           <td class="fn">
           <div style="border: 1px solid #ebebeb; float: left; width: 50px; height: 50px; background: url(https://graph.facebook.com/<%= vote.details.facebook_id %>/picture);"></div>
 
-
           <span class="leg-name"><%= vote.details.first_name %> <%= vote.details.last_name %></span><br />
           <div class="leg-contact">
             <button data-vote="<%= vote.vote[0] %>" data-twitter-id="<%= vote.details.twitter_id %>" data-phone-number="<%= vote.details.phone %>" class="contact-button" >Tweet or call</button>
-
             <div class="number-and-twitter" style="display: none;"></div>
           </div>
-          <!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
+          </td>
          </tr>
          <% }); %>
         </tbody>
@@ -155,11 +154,10 @@
 
           <span class="leg-name"><%= vote.details.first_name %> <%= vote.details.last_name %></span><br />
           <div class="leg-contact">
-            <button data-twitter-id="<%= vote.details.twitter_id %>" data-phone-number="<%= vote.details.phone %>" class="contact-button">Tweet or call</button>
+            <button data-vote="<%= vote.vote[0] %>" data-twitter-id="<%= vote.details.twitter_id %>" data-phone-number="<%= vote.details.phone %>" class="contact-button" >Tweet or call</button>
             <div class="number-and-twitter" style="display: none;"></div>
           </div>
-
-          <!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
+          </td>
          </tr>
          <% }); %>
         </tbody>
