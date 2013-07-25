@@ -34,6 +34,14 @@ h1 {
 p {
   padding: 10px 0 10px 0;
 }
+h1 {
+  text-align: center;
+}
+h2 {
+  font-weight: bold;
+  font-size: 1.6em;
+  text-align: center;
+}
 .important {
   font-weight: bold;
 }
