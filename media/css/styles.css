@@ -211,6 +211,8 @@ table th {
 .voted-against {
   font-weight: bold;
   text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .voted-against {
