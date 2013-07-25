@@ -111,7 +111,7 @@
         <a href="https://twitter.com/intent/tweet?screen_name=thomas&text=adadasdasd"
           class="twitter-mention-button legislator-tweet"
           url="http://defundthensa.com/" data-lang="en" data-count="none"
-          data-size="large" data-counturl="http://defundthensa.com/">Tweet to @thomas</a>
+          data-size="small" data-counturl="http://defundthensa.com/">Tweet to @thomas</a><br /> or call 043 023 012
       </script>
 
       <script type="text/template" id="call-template">
@@ -141,16 +141,10 @@
   
 
           <span class="leg-name"><%= vote.details.first_name %> <%= vote.details.last_name %></span><br />
-          <span class="leg-contact"><button class="contact-button">Tweet or call</button>
-          <div class="number-and-twitter" style="display: none;">asdadas<!--
-    <div class="span2" id="<%= vote.details.twitter_id %>">
-         <a href="https://twitter.com/intent/tweet?screen_name=<%=vote.details.twitter_id %>&text=adadasdasd"
-          class="twitter-mention-button legislator-tweet"
-          url="http://defundthensa.com/" data-lang="en" data-count="none"
-          data-size="large" data-counturl="http://defundthensa.com/">Tweet to @<%= vote.details.twitter_id %></a>
-        </div>-->
+          <div class="leg-contact"><button class="contact-button">Tweet or call</button>
+          <div class="number-and-twitter" style="display: none;">asdadas
         </div>
-          </span>
+          </div>
           <!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
          </tr>
          <% }); %>
