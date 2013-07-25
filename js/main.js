@@ -38,7 +38,6 @@ $(function () {
     $('#what-to-say').slideUp(300);
     $('#phones').slideUp(300);
     _gaq.push(['_trackEvent', 'action', 'called']);
-
   });
 
   var contactTemplate = $('#contact-template').html();
@@ -51,9 +50,11 @@ $(function () {
     var message;
 
     if (vote !== 'Aye') {
-      message = "I'm ashamed that my legislator has voted to continue unconstitutional invasion of my privacy";
+      message = "It's shameful that you voted for unconstitutional record " +
+        "collection instead of #privacy! #defundNSA defundthensa.com";
     } else {
-      message = "Thanks for voting to protect my privacy! I'm here to encourage you to keep up the good work.";
+      message = "Thank you for supporting #privacy! You're earning my vote, " +
+        "keep up the good work! #defundNSA defundthensa.com";
     }
 
     $(ev.currentTarget).hide();
