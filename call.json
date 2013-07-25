@@ -1,0 +1,200 @@
+{
+    "votes": [
+        {
+            "legislator": [
+                {
+                    "_": "Young (IN)",
+                    "$": {
+                        "name-id": "Y000064",
+                        "sort-field": "Young (IN)",
+                        "unaccented-name": "Young (IN)",
+                        "party": "R",
+                        "state": "IN",
+                        "role": "legislator"
+                    }
+                }
+            ],
+            "vote": [
+                "No"
+            ],
+            "details": {
+                "bioguide_id": "Y000064",
+                "birthday": "1972-08-24",
+                "chamber": "house",
+                "contact_form": "http://toddyoung.house.gov/contact-us/",
+                "crp_id": "N00030670",
+                "district": 9,
+                "facebook_id": "186203844738421",
+                "fax": "202-226-6866",
+                "fec_ids": [
+                    "H0IN09070"
+                ],
+                "first_name": "Todd",
+                "gender": "M",
+                "govtrack_id": "412428",
+                "in_office": true,
+                "last_name": "Young",
+                "middle_name": "C.",
+                "name_suffix": null,
+                "nickname": null,
+                "office": "1007 Longworth House Office Building",
+                "party": "R",
+                "phone": "202-225-5315",
+                "state": "IN",
+                "state_name": "Indiana",
+                "thomas_id": "02019",
+                "title": "Rep",
+                "twitter_id": "RepToddYoung",
+                "votesmart_id": 120345,
+                "website": "http://toddyoung.house.gov",
+                "youtube_id": "RepToddYoung"
+            }
+        }
+    ],
+    "meta": [
+        {
+            "majority": [
+                "R"
+            ],
+            "congress": [
+                "113"
+            ],
+            "session": [
+                "1st"
+            ],
+            "committee": [
+                "U.S. House of Representatives"
+            ],
+            "rollcall-num": [
+                "412"
+            ],
+            "legis-num": [
+                "H R 2397"
+            ],
+            "vote-question": [
+                "On Agreeing to the Amendment"
+            ],
+            "amendment-num": [
+                "70"
+            ],
+            "amendment-author": [
+                "Amash of Michigan Amendment No. 100"
+            ],
+            "vote-type": [
+                "RECORDED VOTE"
+            ],
+            "vote-result": [
+                "Failed"
+            ],
+            "action-date": [
+                "24-Jul-2013"
+            ],
+            "action-time": [
+                {
+                    "_": "6:51 PM",
+                    "$": {
+                        "time-etz": "18:51"
+                    }
+                }
+            ],
+            "vote-desc": [
+                ""
+            ],
+            "vote-totals": [
+                {
+                    "totals-by-party-header": [
+                        {
+                            "party-header": [
+                                "Party"
+                            ],
+                            "yea-header": [
+                                "Ayes"
+                            ],
+                            "nay-header": [
+                                "Noes"
+                            ],
+                            "present-header": [
+                                "Answered “Present”"
+                            ],
+                            "not-voting-header": [
+                                "Not Voting"
+                            ]
+                        }
+                    ],
+                    "totals-by-party": [
+                        {
+                            "party": [
+                                "Republican"
+                            ],
+                            "yea-total": [
+                                "94"
+                            ],
+                            "nay-total": [
+                                "134"
+                            ],
+                            "present-total": [
+                                "0"
+                            ],
+                            "not-voting-total": [
+                                "6"
+                            ]
+                        },
+                        {
+                            "party": [
+                                "Democratic"
+                            ],
+                            "yea-total": [
+                                "111"
+                            ],
+                            "nay-total": [
+                                "83"
+                            ],
+                            "present-total": [
+                                "0"
+                            ],
+                            "not-voting-total": [
+                                "6"
+                            ]
+                        },
+                        {
+                            "party": [
+                                "Independent"
+                            ],
+                            "yea-total": [
+                                "0"
+                            ],
+                            "nay-total": [
+                                "0"
+                            ],
+                            "present-total": [
+                                "0"
+                            ],
+                            "not-voting-total": [
+                                "0"
+                            ]
+                        }
+                    ],
+                    "totals-by-vote": [
+                        {
+                            "total-stub": [
+                                "Totals"
+                            ],
+                            "yea-total": [
+                                "205"
+                            ],
+                            "nay-total": [
+                                "217"
+                            ],
+                            "present-total": [
+                                "0"
+                            ],
+                            "not-voting-total": [
+                                "12"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
