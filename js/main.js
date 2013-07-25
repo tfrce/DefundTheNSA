@@ -84,6 +84,10 @@ $(function () {
       legislator.details.twitter_id = null;
     });
 
+    legislators.votes = _.sortBy(legislators.votes, function (legislator) {
+      return legislator.details.last_name + ' ' + legislator.details.first_name;
+    });
+
     var yes = _.filter(legislators.votes, function (vote) {
       return vote.vote[0] === 'Aye';
     });
