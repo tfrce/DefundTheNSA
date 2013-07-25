@@ -42,9 +42,11 @@ $(function () {
     var contactTemplate = $('#contact-template').html();
 
   $('body').on('click', '.contact-button', function (ev) {
+    var twitter = $(ev.currentTarget).attr('data-twitter-id');
+    var phone = $(ev.currentTarget).attr('data-phone-number');
     $(ev.currentTarget).hide();
     $('.number-and-twitter', $(ev.currentTarget).parents('.leg-contact')).show();
-    $('.number-and-twitter', $(ev.currentTarget).parents('.leg-contact')).html(_.template(contactTemplate, {}));
+    $('.number-and-twitter', $(ev.currentTarget).parents('.leg-contact')).html(_.template(contactTemplate, {twitter: twitter, phone: phone}));
      $.getScript("http://platform.twitter.com/widgets.js");
   });
   $('body').on('submit', 'form.zipcodeform', function () {
