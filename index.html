@@ -71,19 +71,7 @@
       <h2>1. Meet with your representatives.</h2>
       <p style="text-align: center;">Meeting your representatives in person at their district offices is one of the most effective ways to tell them what you think and sway their view. Signup and we'll be in touch to help facilitate a meeting in your area.</p>
       <div style="clear: both; height:10px;"></div>
-      <!-- AddThis Button BEGIN -->
-      <div class="addthis_toolbox addthis_default_style ">
-        <a class="addthis_button_facebook_like" fb:like:layout="box_count"></a>
-        <a class="addthis_button_tweet" tw:count="vertical" tw:text="#DefundTheNSA: A critical vote is happening TODAY in Congress that could partially defund NSA surveillance ->" tw:via="" tw:related="tfrce,beaugunderson,sinak,jensnockert,neutralthoughts"></a>
-        <a class="addthis_button_google_plusone" g:plusone:size="tall"></a>
-      </div>
-      <script type="text/javascript">
-      function randomize(e){var t=e.length,n,r;if(t===0)return false;while(--t){n=Math.floor(Math.random()*(t+1));r=e[t];e[t]=e[n];e[n]=r}}var twhandles=["sinak","jensnockert","neutralthoughts","beaugunderson"];randomize(twhandles); var randhandles = "tfrce,"+twhandles[0]+","+twhandles[1]+","+twhandles[2];
-      $("a.addthis_button_tweet").attr('tw:related', randhandles);
-      var addthis_config = addthis_config||{};
-      addthis_config.data_track_addressbar = false;
-      </script>
-      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51ee4be93b168909"></script>
+      
       <div id="mc_embed_signup">
         <form action="http://sina.us7.list-manage1.com/subscribe/post?u=c148127741902298dd3205c12&amp;id=941d3f79d1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <!--<label for="mce-EMAIL">Subscribe to our mailing list</label>-->
@@ -97,7 +85,7 @@
       <hr>
 
       <h2>2. The roll call</h2>
-      <p class="important">Tell your representative what you think about how they voted.</p>
+      <p class="important" style="text-align: center;">Tell your representative what you think about how they voted.</p>
 
       <div class="box vote-table">
 
@@ -128,7 +116,7 @@
         </form>
         <div style="clear: both;"></div>
       <div  style="width: 300px; float: left;">
-      <span class="voted-for">Voted for the amendment and against NSA surveillance.</span>
+      <p class="voted-for">Voted for the amendment and against NSA surveillance.</p>
       <table class="vote-table-data yes-table" cellspacing="10">
         <thead>
           <th>Legislator</th>
@@ -142,7 +130,7 @@
 
           <span class="leg-name"><%= vote.details.first_name %> <%= vote.details.last_name %></span><br />
           <div class="leg-contact">
-            <button data-vote="<%= vote.vote[0] %>" data-twitter-id="<%= vote.details.twitter_id %>" data-phone-number="<%= vote.details.phone %>" class="contact-button" style="background: linear-gradient(to bottom, rgb(195, 217, 236) 0px, rgb(38, 81, 118) 100%, rgb(38, 81, 118) 100%) repeat scroll 0% 0% transparent; border: 1px solid rgb(38, 81, 118); border-radius: 3px 3px 3px 3px; padding: 0px; float: right; margin-right: 55px; margin-top: 1px; width: 120px; line-height: 22px; color: rgb(255, 255, 255); font-size: 12px; text-transform: uppercase; font-weight: 400; text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2) ! important;">Tweet or call</button>
+            <button data-vote="<%= vote.vote[0] %>" data-twitter-id="<%= vote.details.twitter_id %>" data-phone-number="<%= vote.details.phone %>" class="contact-button" style="background: linear-gradient(to bottom, rgb(50,107,157) 0px, rgb(38, 81, 118) 100%, rgb(38, 81, 118) 100%) repeat scroll 0% 0% transparent; border: 1px solid rgb(38, 81, 118); border-radius: 3px 3px 3px 3px; padding: 0px; float: right; margin-right: 55px; margin-top: 1px; width: 110px; line-height: 22px; color: rgb(255, 255, 255); font-size: 12px; text-transform: uppercase; font-weight: 400; text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2) ! important;">Tweet or call</button>
             <div class="number-and-twitter" style="display: none;"></div>
           </div>
           <!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
@@ -152,7 +140,7 @@
       </table>
       </div>
       <div  style="width: 300px; float: left;">
-      <span class="voted-against">Voted against the amendment and for NSA surveillance.</span>
+      <p class="voted-against">Voted against the amendment and for NSA surveillance.</p>
 
       <table class="vote-table-data no-table">
         <thead>
