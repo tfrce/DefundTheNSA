@@ -1,6 +1,6 @@
 html {
 	margin: 0px;
-	padding: 0px;			
+	padding: 0px;
 }
 body {
 	font-family:"ff-dagny-web-pro",sans-serif;
@@ -25,7 +25,7 @@ h1 {
 }
 
 .addthis_default_style .at300b {
-  padding: 0 25px 0 0       !important; 
+  padding: 0 25px 0 0       !important;
 }
 .tagline {
   font-size: 20px;
@@ -175,14 +175,31 @@ table th {
   margin-left: 5px;
   font-size: 90%;
 }
+.no-table td {
+  margin: 5px;
+  padding: 10px;
+  color: ghostwhite;
+  background-color: #333;
+}
+
+table td {
+  border: solid;
+}
+
+.yes-table td{
+  background-color: whitesmoke;
+  border: white solid;
+}
 .number-and-twitter {
   margin-left: 5px;
   float: left;
 
 }
 .voted-against {
+  text-align: center;
   color: #ff0000;
 }
 .voted-for {
-  color: #00ff00;
+  text-align: center;
+  color: #339933;
 }
