@@ -14,10 +14,6 @@ function getLegislators(zip, cb) {
 }
 
 function submitZipcode() {
-  $('#legislators').addClass('loading');
-  $('#tweets, #phones').hide();
-  $('#tweets .list, #phones .list').html('');
-  $('#what-to-say').slideDown(300);
 
   getLegislators($('#zipcode').val(), function (legislators) {
 
@@ -29,7 +25,6 @@ function submitZipcode() {
     $('[data-bio-id="'+legislator.bioguide_id+'"]').show();
 
     });
-  $.getScript("http://platform.twitter.com/widgets.js");
 
   });
 }
@@ -44,7 +39,7 @@ $(function () {
     _gaq.push(['_trackEvent', 'action', 'called']);
 
   })
-  $('form.zipcodeform').submit(function () {
+  $('body').on('submit', 'form.zipcodeform', function () {
     submitZipcode();
     _gaq.push(['_trackEvent', 'action', 'zipcode-lookup']);
     return false;
@@ -59,7 +54,6 @@ $(function () {
       return vote.vote[0] === 'No';
     });
     $('.vote-table').html(_.template(callTemplate, {votes: {yes:yes, no:no}}));
-  $.getScript("http://platform.twitter.com/widgets.js");
     console.log(yes, no.length);
   });
 });

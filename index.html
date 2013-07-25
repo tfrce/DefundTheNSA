@@ -68,8 +68,17 @@
         <div style="clear: both;"></div>
       </div>
 
-      <div class="box">
-        <form style="" class="zipcodeform">
+
+
+      <div class="box vote-table">
+
+      </div>
+
+
+
+      <script type="text/template" id="call-template">
+        <span class="intro">2) The roll call</span>
+      <form style="" class="zipcodeform">
           <fieldset class="zipcode-search">
             <label for="zipcode">Zip Code</label>
             <input pattern="\d{5}" title="The zip code should consist of five numbers only"
@@ -80,15 +89,6 @@
           </fieldset>
         </form>
         <div style="clear: both;"></div>
-      </div>
-
-      <div class="box vote-table">
-
-      </div>
-
-
-
-      <script type="text/template" id="call-template">
       <div  style="width: 300px; float: left;">
       <span>Voted Yes</span>
       <table class="vote-table-data">
@@ -104,12 +104,12 @@
 
           <span class="leg-name"><%= vote.details.first_name %> <%= vote.details.last_name %></span><br />
           <span class="leg-contact">
-    <div class="span2" id="<%= vote.details.twitter_id %>">
+    <!--<div class="span2" id="<%= vote.details.twitter_id %>">
          <a href="https://twitter.com/intent/tweet?screen_name=<%=vote.details.twitter_id %>&text=adadasdasd"
           class="twitter-mention-button legislator-tweet"
           url="http://defundthensa.com/" data-lang="en" data-count="none"
           data-size="large" data-counturl="http://defundthensa.com/">Tweet to @<%= vote.details.twitter_id %></a>
-        </div>
+        </div>-->
           </span>
           <!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
          </tr>
