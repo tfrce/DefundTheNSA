@@ -29,6 +29,13 @@
   <meta property="og:url" content="http://DefundTheNSA.com" />
   <meta property="og:image" content="http://defundthensa.com/media/images/defundthensa-facebook.jpg" />
 
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:url" content="http://DefundTheNSA.com"/>
+  <meta property="twitter:title" content="An amendment to defund the NSA's domestic surveilance program nearly passed with a vote of 205-217 in the House of Representatives" />
+  <meta property="twitter:description" content="This past July a critical vote nearly passed in Congress that could have defunded some of the NSA's surveillance program."/>
+  <meta property="twitter:image" content="http://defundthensa.com/media/images/defundthensa-facebook.jpg" />
+  <meta property="twitter:site" content="@tfrce"/>
+
   <link rel="stylesheet" href="media/css/reset.css" />
   <link rel="stylesheet" href="media/css/styles.css" />
   <link rel="stylesheet" href="media/css/mc-styles.css" />
@@ -77,12 +84,9 @@
       addthis_config.data_track_addressbar = false;
       </script>
       <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51ee4be93b168909"></script>
-      <!-- Begin MailChimp Signup Form -->
-      <!--<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-      <style type="text/css">
-      /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-      We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-      </style>-->
+      <br />
+      <hr>
+
       <div id="mc_embed_signup">
         <form action="http://sina.us7.list-manage1.com/subscribe/post?u=c148127741902298dd3205c12&amp;id=941d3f79d1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <!--<label for="mce-EMAIL">Subscribe to our mailing list</label>-->
@@ -103,10 +107,14 @@
       </div>
 
       <script type="text/template" id="contact-template">
-        <a href="https://twitter.com/intent/tweet?screen_name=<%=twitter%>&text=adadasdasd"
+        <% if(twitter.length > 0) { %>
+        <a href="https://twitter.com/intent/tweet?screen_name=<%=twitter%>&text=<%=message%>"
           class="twitter-mention-button legislator-tweet"
           url="http://defundthensa.com/" data-lang="en" data-count="none"
           data-size="small" data-counturl="http://defundthensa.com/">Tweet to @<%=twitter%></a><br /> or call <%=phone%>
+        <% } else { %>
+          Call <%=phone%>
+        <% }; %>
       </script>
 
       <script type="text/template" id="call-template">
@@ -123,8 +131,8 @@
         </form>
         <div style="clear: both;"></div>
       <div  style="width: 300px; float: left;">
-      <span class="voted-for">Voted for the amendment and against the NSA surveillance.</span>
-      <table class="vote-table-data">
+      <span class="voted-for">Voted for the amendment and against NSA surveillance.</span>
+      <table class="vote-table-data yes-table" cellspacing="10">
         <thead>
           <th>Legislator</th>
         </thead>
@@ -133,11 +141,11 @@
          <tr class="leg-row" data-bio-id="<%= vote.details.bioguide_id %>">
           <td class="fn">
           <div style="border: 1px solid #ebebeb; float: left; width: 50px; height: 50px; background: url(https://graph.facebook.com/<%= vote.details.facebook_id %>/picture);"></div>
-  
+
 
           <span class="leg-name"><%= vote.details.first_name %> <%= vote.details.last_name %></span><br />
           <div class="leg-contact">
-            <button data-twitter-id="<%= vote.details.twitter_id %>" data-phone-number="<%= vote.details.phone %>" class="contact-button">Tweet or call</button>
+            <button data-vote="<%= vote.vote[0] %>" data-twitter-id="<%= vote.details.twitter_id %>" data-phone-number="<%= vote.details.phone %>" class="contact-button" style="background: linear-gradient(to bottom, rgb(195, 217, 236) 0px, rgb(38, 81, 118) 100%, rgb(38, 81, 118) 100%) repeat scroll 0% 0% transparent; border: 1px solid rgb(38, 81, 118); border-radius: 3px 3px 3px 3px; padding: 0px; float: right; margin-right: 55px; margin-top: 1px; width: 120px; line-height: 22px; color: rgb(255, 255, 255); font-size: 12px; text-transform: uppercase; font-weight: 400; text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2) ! important;">Tweet or call</button>
             <div class="number-and-twitter" style="display: none;"></div>
           </div>
           <!--<img src="https://graph.facebook.com/<%= vote.details.facebook_id %>/picture" />--></td>
@@ -149,7 +157,7 @@
       <div  style="width: 300px; float: left;">
       <span class="voted-against">Voted against the amendment and for NSA surveillance.</span>
 
-      <table class="vote-table-data">
+      <table class="vote-table-data no-table">
         <thead>
           <th>Legislator</th>
         </thead>
@@ -189,11 +197,11 @@
         <div style="clear:both"> </div>
       </div>
       <div class="footer" style="padding-top:40px;">
-       This site was built by <a target="_blank" href="https://twitter.com/beaugunderson">Beau
-        Gunderson</a>, <a target="_blank" href="https://twitter.com/neutralthoughts">Thomas Davis</a>,
-       <a target="_blank" href="https://twitter.com/jensnockert">Jens Nockert</a>, and <a
-        target="_blank" href="https://twitter.com/sinak">Sina Khanifar</a>, members of <a
-        target="_blank" href="http://sina.is/task-force/">Taskforce.is</a>.
+       This site was built by <a target="_blank" href="https://twitter.com/beaugunderson">Beau Gunderson</a>,
+       <a target="_blank" href="https://twitter.com/neutralthoughts">Thomas Davis</a>,
+       <a target="_blank" href="https://twitter.com/jensnockert">Jens Nockert</a>,
+       and <a target="_blank" href="https://twitter.com/sinak">Sina Khanifar</a>,
+       members of <a target="_blank" href="http://sina.is/task-force/">Taskforce.is</a>.
       </div>
 
       <div class="footer" style="padding-top:0px;">
