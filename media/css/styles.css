@@ -17,7 +17,16 @@ strong {
   font-weight: bold;
 }
 h1 {
-  font-size: 38px;
+  font-size: 28px;
+  text-align: center;
+  padding: 0.5em;
+}
+
+h2 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.5em;
 }
 .intro {
   font-size: 24px;
