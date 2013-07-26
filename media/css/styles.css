@@ -149,6 +149,11 @@ blockquote {
   font-size: 12px;
   padding : 4px 8px;
   display: block;
+  cursor: hand;
+  box-shadow: 0px 1px 2px 0px #AFAFAF, -1px -1px 3px 0px rgba(197, 197, 197, 0.19) inset;
+}
+.contact-button:hover {
+  box-shadow: 0px 1px 2px 0px #AFAFAF, 0px 1px 2px 0px #AFAFAF inset
 }
 #submit-zipcode.btn {
   max-width: 200px !important;
@@ -219,7 +224,6 @@ table td {
   color: #339933;
 }
 
-.yes-table td .contact-button {
+.yes-table .contact-button {
   background-color: #66cc00;
-
 }
