@@ -35,7 +35,7 @@ p {
   padding: 10px 0 10px 0;
 }
 h1 {
-   text-align: center;
+  text-align: center;
 }
 h2 {
   font-weight: bold;
@@ -189,4 +189,17 @@ table td {
 .yes-table td{
   background-color: whitesmoke;
   border: white solid;
+}
+.number-and-twitter {
+  margin-left: 5px;
+  float: left;
+
+}
+.voted-against {
+  text-align: center;
+  color: #ff0000;
+}
+.voted-for {
+  text-align: center;
+  color: #339933;
 }
