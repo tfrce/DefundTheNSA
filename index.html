@@ -124,7 +124,7 @@
         <div style="clear: both;"></div>
       <div  style="width: 300px; float: left;">
       <span>Voted Yes</span>
-      <table class="vote-table-data">
+      <table class="vote-table-data yes-table" cellspacing="10">
         <thead>
           <th>Legislator</th>
         </thead>
@@ -133,7 +133,7 @@
          <tr class="leg-row" data-bio-id="<%= vote.details.bioguide_id %>">
           <td class="fn">
           <div style="border: 1px solid #ebebeb; float: left; width: 50px; height: 50px; background: url(https://graph.facebook.com/<%= vote.details.facebook_id %>/picture);"></div>
-  
+
 
           <span class="leg-name"><%= vote.details.first_name %> <%= vote.details.last_name %></span><br />
           <span class="leg-contact"><button class="contact-button">Tweet or call</button>
@@ -155,7 +155,7 @@
       <div  style="width: 300px; float: left;">
       <span>Voted No</span>
 
-      <table class="vote-table-data">
+      <table class="vote-table-data no-table">
         <thead>
           <th>Republican</th>
         </thead>
